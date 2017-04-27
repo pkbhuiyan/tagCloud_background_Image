@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<style>
+		.img {
+    position: absolute;
+    bottom: 33%;
+    left: 41%;
+    z-index: -1;
+	}
+	#myCanvasContainer{position: relative;}
+		
+
+	</style>
+	
+</head>
+<body>
+
+
+<div align="center">
+	<div id="myCanvasContainer">
+		 <img class="img"	src="core.png" alt="Core_Values">
+		 <canvas width="400" height="400" id="myCanvas">
+		  <p>In Internet Explorer versions up to 8, things inside the canvas are inaccessible!</p>
+		 </canvas>
+	</div>
+ 
+	<div id="tags">
+		 <ul class="weigh">
+		  <li><a href="/" target="_blank">Creativity</a></li>
+		  <li><a href="/fish">Positivity</a></li>
+		  <li><a href="/chips">Risk Mangement</a></li>
+		  <li><a href="/salt">Empowerment</a></li>
+		  <li><a href="/vinegar">Thinking</a></li>
+		  <li><a href="/fish">Innovation</a></li>
+		  <li><a href="/chips">Fun</a></li>
+		  <li><a href="/salt">Caring</a></li>
+		  <li><a href="/vinegar">Diligence</a></li>
+		  <li><a href="/fish">Trust</a></li>
+		  <li><a href="/chips">Ownership</a></li>
+		  <li><a href="/salt">Teamwork</a></li>
+		  <li><a href="/vinegar">Pride</a></li>
+		  <li><a href="/salt">Planning</a></li>
+		  <li><a href="/vinegar">Compliance</a></li>
+		  <li><a href="/fish">Quality</a></li>
+		  <li><a href="/chips">Safety</a></li>
+		  <li><a href="/salt">Conviction</a></li>
+		  <li><a href="/vinegar">Accountibility</a></li>
+		  <li><a href="/fish">Conviction</a></li>
+		  <li><a href="/chips">Reliabilty</a></li>
+		  <li><a href="/salt">Customer Driveness</a></li>
+		  <li><a href="/vinegar">Respect</a></li>
+		<li><a href="/chips">Mentoring</a></li>
+		  <li><a href="/salt">Awareness</a></li>
+		  <li><a href="/vinegar">Courage</a></li>
+		  <li><a href="/fish">Humanity</a></li>
+		  <li><a href="/chips">Humility</a></li>
+		  <li><a href="/salt">Recognition</a></li>
+		  <li><a href="/vinegar">Integrity</a></li>
+		  <li><a href="/salt">Adaptibility</a></li>
+		  <li><a href="/vinegar">passion</a></li>
+		  
+
+		 </ul>
+	</div>
+
+</div>
+
+
+
+<!-- Script Code for Tag Cloud -->
+
+
+<script type="text/javascript">
+	
+	window.onload = function() {
+    $('#tags').hide();
+    try {
+       TagCanvas.Start('myCanvas','tags',{
+         textFont: 'Impact,"Arial Black",sans-serif',
+         outlineColour : '#000',
+         outlineWidth : 0.3,
+		 textColour: '#000',
+		 textHeight: 15,
+		 wheelZoom : false,
+
+
+
+       });
+    } catch(e) {
+      // something went wrong, hide the canvas container
+      document.getElementById('myCanvasContainer').style.display = 'none';
+    }
+    
+  };
+
+
+
+
+
+// ======Set Tag Canvas ========
+
+
+ $(document).ready(function() {
+   if( ! $('#myCanvas').tagcanvas({
+     textColour : '#ffffff',
+     outlineThickness : 1,
+     maxSpeed : 0.03,
+     depth : 0.75,
+
+   }),'tags') {
+     // TagCanvas failed to load
+     $('#myCanvasContainer').hide();
+   }
+   // your other jQuery stuff here...
+
+ });
+
+
+</script>
+
+<!-- Add BackGround Image to Canvas -->
+
+
+
+
+
+
+	 <!--[if lt IE 9]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+ <script src="jquery-2.2.4.min.js" type="text/javascript"></script>
+  <script src="jquery.tagcanvas.min.js" type="text/javascript"></script>
+
+
+<!-- Script Code for Tag Cloud  end here -->
+
+
+
+
+
+</body>
+</html>
